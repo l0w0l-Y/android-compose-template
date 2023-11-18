@@ -1,0 +1,4 @@
+<resources>
+    <!--TODO: Set project name-->
+    <string name="app_name">Compose template</string>
+</resources>

@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project(":core-theme")
+    implementation(core)
+
+    implementation(composeUi)
+    implementation(composePreview)
+    implementation(composeRuntime)
+    debugImplementation(composeTooling)
+
+    implementation(material3)
+}
+
+android {
+    namespace 'com.kaleksandra.coreui'
+}

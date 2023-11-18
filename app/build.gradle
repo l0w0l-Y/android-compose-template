@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    defaultConfig {
+        applicationId "com.kaleksandra.composetemplate"
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    namespace 'com.kaleksandra.composetemplate'
+}
+
+dependencies {
+    implementation project(":core-theme")
+    implementation project(":core-common")
+    implementation project(":core-data")
+    implementation project(":core-navigation")
+    implementation project(":core-ui")
+
+    implementation(core)
+    implementation(activity)
+    implementation(composeUi)
+    implementation(composePreview)
+    implementation(material3)
+    implementation(hiltDep)
+    kapt(hiltKapt)
+    implementation(hiltNavigation)
+
+    implementation(dataStore)
+}

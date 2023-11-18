@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation(core)
+    implementation(composeUi)
+    implementation(composePreview)
+
+    implementation(material3)
+}
+
+android {
+    namespace 'com.kaleksandra.coretheme'
+}

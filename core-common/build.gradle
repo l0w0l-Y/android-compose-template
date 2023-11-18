@@ -1,0 +1,22 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+}
+
+dependencies {
+    implementation(core)
+    implementation(composeRuntime)
+
+    implementation(lifecycle)
+    implementation(lifecycleViewmodel)
+
+    implementation(hiltDep)
+    kapt(hiltKapt)
+    implementation(hiltNavigation)
+}
+
+android {
+    namespace 'com.kaleksandra.corecommon'
+}

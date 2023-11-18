@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+dependencies {
+    implementation project(":core-theme")
+
+    implementation(navigation)
+    implementation(core)
+
+    implementation(material3)
+
+    implementation(composeUi)
+    implementation(composePreview)
+    implementation(composeRuntime)
+    debugImplementation(composeTooling)
+
+    implementation(gson)
+}
+
+android {
+    namespace 'com.kaleksandra.corenavigation'
+}
